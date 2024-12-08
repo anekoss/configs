@@ -25,6 +25,9 @@ spring:
     openfeign:
       circuitbreaker:
         enabled: true
+    circuitbreaker:
+      hystrix:
+        enabled: true
 
 eureka:
   client:
