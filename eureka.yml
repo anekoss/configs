@@ -11,7 +11,7 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone:
-        - "http://eureka:${server.port}/eureka"
+        - "http://localhost:${server.port}/eureka"
         -
 management:
   endpoints:
