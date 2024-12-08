@@ -12,19 +12,19 @@ spring:
           lower-case-service-id: true
       routes:
         - id: auth
-          uri: lb://auth
+          uri: http://auth:8085
           predicates:
             - Path=/users/**,/auth/**,/admin/**
         - id: department
-          uri: lb://department
+          uri: http://department:8086
           predicates:
             - Path=/departments/**, /rooms/**
         - id: order
-          uri: lb://order
+          uri: http://order:8087
           predicates:
             - Path=/orders/**
         - id: oxygen
-          uri: lb://oxygen
+          uri: http://oxygen:8096
           predicates:
             - Path=/storages/**, /oxygen-supply/**
 
