@@ -30,10 +30,10 @@ spring:
 
 eureka:
   client:
+    register-with-eureka: false
+    fetch-registry: false
     serviceUrl:
       defaultZone: http://eureka:8761/eureka
-    enabled: true
-
 management:
   endpoints:
     web:
