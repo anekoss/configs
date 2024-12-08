@@ -18,7 +18,7 @@ spring:
         - id: department
           uri: http://department:8086
           predicates:
-            - Path=/departments/**, /rooms/**
+            - Path=/departments/**,/rooms/**
         - id: order
           uri: http://order:8087
           predicates:
