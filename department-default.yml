@@ -28,6 +28,21 @@ spring:
     circuitbreaker:
       hystrix:
         enabled: true
+  kafka:
+    bootstrap-servers:
+      - PLAINTEXT://broker-1:19092
+      - PLAINTEXT://broker-2:19092
+      - PLAINTEXT://broker-3:19092
+    admin:
+      auto-create: true
+    topics:
+      - name: department_update_in
+        partitions: 3
+        replicas: 1
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      new-favorites-topic: "department_update_in"
 
 eureka:
   client:
