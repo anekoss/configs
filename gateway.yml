@@ -27,7 +27,16 @@ spring:
           uri: lb://oxygen
           predicates:
             - Path=/storages/**, /oxygen-supply/**
-
+        - id: file
+          uri: lb://file
+          predicates:
+            - Path=/upload/**, /download/**
+        - id: notification
+          uri: lb://notification
+          predicates:
+            - Path=/api/v1/notifications/ws/**
+          filters:
+            - RewritePath=/api/v1/notifications/ws/(?<segment>/?.*), /ws/$\{segment}
 eureka:
   client:
     serviceUrl:
