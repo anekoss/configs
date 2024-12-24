@@ -38,7 +38,7 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-      new-place-feedback-topic: "order_update_in"
+      order-update-in: "order_update_in"
 
 eureka:
   client:
