@@ -18,7 +18,7 @@ spring:
         - id: department
           uri: http://department:8086
           predicates:
-            - Path=/departments/**,/rooms/**,,swagger-ui/**,/v3/api-docs/**,/webjars/**
+            - Path=/departments/**,/rooms/**,swagger-ui/**,/v3/api-docs/**,/webjars/**
         - id: order
           uri: http://order:8087
           predicates:
@@ -26,11 +26,11 @@ spring:
         - id: oxygen
           uri: http://oxygen:8096
           predicates:
-            - Path=/storages/**,/oxygen-supply/**,,swagger-ui/**,/v3/api-docs/**,/webjars/**
+            - Path=/storages/**,/oxygen-supply/**,swagger-ui/**,/v3/api-docs/**,/webjars/**
         - id: file
           uri: lb://file
           predicates:
-            - Path=/files/**,,swagger-ui/**,/v3/api-docs/**,/webjars/**
+            - Path=/files/**,swagger-ui/**,/v3/api-docs/**,/webjars/**
 
 eureka:
   client:
