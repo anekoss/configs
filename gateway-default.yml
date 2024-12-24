@@ -14,7 +14,7 @@ spring:
         - id: auth
           uri: http://auth:8085
           predicates:
-            - Path=/users/**,/auth/**,/admin/**
+            - Path=/users/**,/auth/**,/admin/**,swagger-ui/**
         - id: department
           uri: http://department:8086
           predicates:
@@ -42,15 +42,3 @@ management:
     web:
       exposure:
         include: refresh
-a
-springdoc:
-  api-docs:
-    enabled: true
-    path: /v3/api-docs
-  swagger-ui:
-    enabled: true
-    urls:
-      - name: gateway
-        url: /v3/api-docs
-      - name: auth
-        url: /auth/v3/api-docs, /auth/swagger-ui/index.html
