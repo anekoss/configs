@@ -36,13 +36,13 @@ spring:
     admin:
       auto-create: true
     topics:
-      - name: department_update_in
-        partitions: 3
-        replicas: 1
+      name: department_update_in
+      partitions: 3
+      replicas: 1
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-      new-favorites-topic: "department_update_in"
+      department-update-in: "department_update_in"
 
 eureka:
   client:

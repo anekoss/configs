@@ -17,13 +17,19 @@ spring:
     url: jdbc:postgresql://postgres:5432/postgres
     user: postgres
     password: postgres
-  minio:
-    endpoint: ${MINIO_ENDPOINT:http://localhost:9000}
-    accessKey: ${MINIO_ACCESS_KEY:admin}
-    secretKey: ${MINIO_SECRET_KEY:admin}
-    bucket: ${MINIO_BUCKET:oxygen-bucket}
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 2MB
+      enabled: true
+minio:
+  endpoint: ${MINIO_ENDPOINT:http://localhost:9000}
+  accessKey: ${MINIO_ACCESS_KEY:admin}
+  secretKey: ${MINIO_SECRET_KEY:admin123}
+  bucket: ${MINIO_BUCKET:oxygen-bucket}
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://eureka:8761/eureka/
+    enabled: false

@@ -22,8 +22,8 @@ spring:
         name: "order_update_in"
         group-id: "order_group"
 
-
 eureka:
   client:
     serviceUrl:
       defaultZone: http://eureka:8761/eureka/
+    enabled: false
