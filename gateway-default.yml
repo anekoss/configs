@@ -14,11 +14,11 @@ spring:
         - id: auth
           uri: http://auth:8085
           predicates:
-            - Path=/users/**,/auth/**,/admin/**
+            - Path=/users/**,/auth/**,/admin/**,/v3/api-docs/**
         - id: department
           uri: http://department:8086
           predicates:
-            - Path=/departments/**,/rooms/**
+            - Path=/departments/**,/rooms/**,/v3/api-docs/**
         - id: order
           uri: http://order:8087
           predicates:
@@ -49,10 +49,3 @@ springdoc:
     path: /v3/api-docs
   swagger-ui:
     enabled: true
-    urls:
-      - name: gateway
-        url: /v3/api-docs
-      - name: auth
-        url: /auth/v3/api-docs
-      - name: department
-        url: /department/v3/api-docs
