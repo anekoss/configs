@@ -28,7 +28,7 @@ spring:
           predicates:
             - Path=/storages/**,/oxygen-supply/**
         - id: file
-          uri: lb://file
+          uri: lb://file:8090
           predicates:
             - Path=/files/**
 
