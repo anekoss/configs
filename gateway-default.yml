@@ -14,7 +14,7 @@ spring:
         - id: auth
           uri: http://auth:8085
           predicates:
-            - Path=/users/**,/auth/**,/admin/**,swagger-ui/**
+            - Path=/users/**,/auth/**,/admin/**,swagger-ui/**,/v3/api-docs/**,/webjars/**
         - id: department
           uri: http://department:8086
           predicates:
