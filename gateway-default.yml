@@ -14,7 +14,7 @@ spring:
         - id: auth
           uri: http://auth:8085
           predicates:
-            - Path=/users/**,/auth/**,/admin/**,/v3/api-docs/**
+            - Path=/users/**,/register/**,/authenticate/**,/admin/**,/v3/api-docs/**
         - id: department
           uri: http://department:8086
           predicates:
