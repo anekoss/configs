@@ -41,9 +41,3 @@ management:
     web:
       exposure:
         include: refresh
-
-springdoc:
-  swagger-ui:
-    enabled: true
-  api-docs:
-    enabled: true
