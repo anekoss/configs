@@ -10,10 +10,7 @@ spring:
         spring.json.trusted.packages: "*"
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
-    bootstrap-servers:
-      - PLAINTEXT://broker-1:19092
-      - PLAINTEXT://broker-2:19092
-      - PLAINTEXT://broker-3:19092
+    bootstrap-servers: kafka1:29092,kafka2:29093,kafka3:29094
     topics:
       department-update-in:
         name: "department_update_in"
