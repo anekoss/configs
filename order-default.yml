@@ -29,9 +29,9 @@ spring:
     admin:
       auto-create: true
     topics:
-      - name: order_update_in
-        partitions: 3
-        replicas: 1
+      name: order_update_in
+      partitions: 3
+      replicas: 1
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
