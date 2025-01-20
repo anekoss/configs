@@ -34,7 +34,7 @@ spring:
         - id: notification
           uri: lb://notification:8091
           predicates:
-            - Path=/**
+            - Path=/ws/**
 
 springdoc:
   enable-native-support: true
