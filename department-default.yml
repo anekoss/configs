@@ -5,9 +5,9 @@ spring:
   application:
     name: department
   r2dbc:
-    url: r2dbc:postgresql://postgres:5432/postgres
-    username: postgres
-    password: postgres
+    url: ${DEPARTMENT_DB_URL:r2dbc:postgresql://postgres:5432/postgres}
+    username: ${DEPARTMENT_DB_USERNAME:postgres}
+    password: ${DEPARTMENT_DB_PASSWORD:postgres}
   jpa:
     show-sql: true
   liquibase:
@@ -53,7 +53,7 @@ token:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka:8761/eureka
+      defaultZone: ${EUREKA_CLIENT_URL:http://eureka:8761/eureka}
 
 management:
   endpoints:

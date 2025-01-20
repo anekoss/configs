@@ -5,9 +5,9 @@ spring:
   application:
     name: oxygen
   datasource:
-    url: jdbc:postgresql://postgres:5432/postgres
-    username: postgres
-    password: postgres
+    url: ${OXYGEN_DB_URL:jdbc:postgresql://postgres:5432/postgres}
+    username: ${OXYGEN_DB_USERNAME:postgres}
+    password: ${OXYGEN_DB_PASSWORD:postgres}
     driverClassName: org.postgresql.Driver
   liquibase:
     enabled: true
@@ -35,7 +35,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka:8761/eureka
+      defaultZone: ${EUREKA_CLIENT_URL:http://eureka:8761/eureka}
 
 management:
   endpoints:
